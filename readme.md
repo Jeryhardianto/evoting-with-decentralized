@@ -1,15 +1,15 @@
-# Kontrak Pintar E-Voting
+# Smart Contract E-Voting
 
-Sistem pemungutan suara elektronik berbasis blockchain yang diimplementasikan sebagai kontrak pintar Ethereum.
+Sistem pemungutan suara elektronik berbasis blockchain yang diimplementasikan sebagai Smart Contract Ethereum.
 
 ## Gambaran Umum
 
-Proyek ini mengimplementasikan sistem e-voting terdesentralisasi menggunakan teknologi blockchain Ethereum. Kontrak pintar ini memungkinkan proses pemungutan suara yang aman, transparan, dan tahan terhadap manipulasi.
+Proyek ini mengimplementasikan sistem e-voting terdesentralisasi menggunakan teknologi blockchain Ethereum. Smart Contract ini memungkinkan proses pemungutan suara yang aman, transparan, dan tahan terhadap manipulasi.
 
 ## Struktur Proyek
 
 ```
-├── evoting.sol         # Kontrak pintar e-voting utama
+├── evoting.sol         # Smart Contract e-voting utama
 └── tests/
 └── evoting_test.sol  # Pengujian unit untuk kontrak e-voting
 ```
@@ -40,7 +40,7 @@ Proyek ini mengimplementasikan sistem e-voting terdesentralisasi menggunakan tek
 ### Instalasi
 
 1. Kloning repositori ini atau buat file di lingkungan pengembangan Anda
-2. Kompilasi kontrak pintar menggunakan Solidity Compiler
+2. Kompilasi Smart Contract menggunakan Solidity Compiler
 3. Deploy ke jaringan pengujian atau blockchain lokal
 
 ### Pengujian
