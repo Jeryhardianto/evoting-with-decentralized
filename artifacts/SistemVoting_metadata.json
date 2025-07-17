@@ -1,0 +1,294 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string[]",
+						"name": "_namaKandidat",
+						"type": "string[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_durasiVotingDetik",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "pemilih",
+						"type": "address"
+					}
+				],
+				"name": "PemilihDidaftarkan",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "pemilih",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "idKandidat",
+						"type": "uint256"
+					}
+				],
+				"name": "SuaraDiberikan",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_idKandidat",
+						"type": "uint256"
+					}
+				],
+				"name": "berikanSuara",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_alamatPemilih",
+						"type": "address"
+					}
+				],
+				"name": "daftarkanPemilih",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_idKandidat",
+						"type": "uint256"
+					}
+				],
+				"name": "getKandidat",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "nama",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "jumlahSuara",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct SistemVoting.Kandidat",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "kandidatList",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "nama",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "jumlahSuara",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "pemilihTerdaftar",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "sudahMemilih",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "waktuMulai",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "waktuSelesai",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Gemini AI",
+			"kind": "dev",
+			"methods": {
+				"berikanSuara(uint256)": {
+					"params": {
+						"_idKandidat": "ID kandidat yang dipilih (dimulai dari 0)."
+					}
+				},
+				"daftarkanPemilih(address)": {
+					"params": {
+						"_alamatPemilih": "Alamat yang akan didaftarkan."
+					}
+				},
+				"getKandidat(uint256)": {
+					"params": {
+						"_idKandidat": "ID kandidat yang ingin dilihat."
+					},
+					"returns": {
+						"_0": "Detail kandidat (id, nama, jumlah suara)."
+					}
+				}
+			},
+			"title": "SistemVoting",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"berikanSuara(uint256)": {
+					"notice": "Memberikan suara ke salah satu kandidat."
+				},
+				"daftarkanPemilih(address)": {
+					"notice": "Mendaftarkan satu alamat sebagai pemilih yang sah."
+				},
+				"getKandidat(uint256)": {
+					"notice": "Mendapatkan detail lengkap dari seorang kandidat."
+				}
+			},
+			"notice": "Kontrak untuk melakukan voting terdesentralisasi dengan daftar pemilih dan periode waktu yang ditentukan.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"evoting.sol": "SistemVoting"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"evoting.sol": {
+			"keccak256": "0xbede9309d074da15bd9425b3a1522f807be47d244253acba638cf3509f25dbf6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://12beccb5ceeeefc93f40e7f0cd9bd1775519b5f174d6ee17b501b53713e4001e",
+				"dweb:/ipfs/QmWnSPTftVLPnwbbAz7RvFV6ueFmFKhgkYzvjCJQPuEPxm"
+			]
+		}
+	},
+	"version": 1
+}
