@@ -1,4 +1,4 @@
-# Smart Contract E-Voting
+# Blockchain-based E-Voting
 
 Sistem pemungutan suara elektronik berbasis blockchain yang diimplementasikan sebagai Smart Contract Ethereum.
 
